@@ -1,0 +1,125 @@
+*, *::after, *::before{
+    box-sizing: border-box;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: normal;
+    margin: 0;
+    padding: 0;
+}
+
+:root{
+    --main-darkest-gray: #212529;
+    --main-dark-gray: #343A40;
+    --main-gray: #495057;
+    --main-light-gray: #6C757D;
+    --main-super-light-gray: #ADB5BD;
+    --main-light: #E9ECEF;
+    --main-lightest: #F8F9FA;
+}
+
+body{
+    background: linear-gradient(135deg, var(--main-super-light-gray), var(--main-dark-gray));
+    background-repeat: no-repeat;
+    height: 1000px;
+}
+
+.topbar{
+    display: flex;
+    background: var(--main-lightest);
+    padding-top: 10px;
+    padding-bottom: 10px;
+    justify-content: center;
+}
+
+.topbar-title{
+    color: var(--main-darkest-gray);
+    font-size: 2rem;
+
+}
+
+.content{
+    display: flex;
+    column-gap: 100px;
+    padding-top: 50px;
+    max-width: 1000px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    position: relative;
+}
+
+a{
+    text-decoration: none;
+}
+
+.project{
+    background: linear-gradient(to right, var(--main-dark-gray), var(--main-light));
+    border: var(--main-darkest-gray) 3px solid;
+    width: 240px;
+    height: 400px;
+    display: flex;
+    flex-wrap: wrap;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px 15px var(--main-gray);
+}
+
+img{
+    display: block;
+    width: 180px;
+    height: auto;
+    border-radius: 20px;
+    margin-left: 25px;
+}
+
+.container{
+    position: relative;
+    width: 100%;
+}
+
+.overlay{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: 0.5s ease-in-out;
+    background-color: var(--main-gray);
+    border-radius: 5px;
+}
+
+.container:hover .overlay{
+    opacity: 0.8;
+}
+
+.container:hover .overlay-text{
+    opacity: 1;
+}
+
+.overlay-text{
+    color: var(--main-lightest);
+    font-size: 2rem;
+    position: absolute;
+    top: 40%;
+    left: 40%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, 50%);
+    transform: translate(-50%, -50%);
+    text-align: left;
+}
+
+h1{
+    font-weight: 1000;
+    color: var(--main-lightest);
+    padding-top: 20px;
+    padding-bottom: 10px;
+    text-align: center;
+}
+
+h2{
+    font-size: 1.2rem;
+    color: var(--main-lightest);
+    padding-left: 20px;
+    padding-top: 5px;
+    padding-bottom: 20px;
+}

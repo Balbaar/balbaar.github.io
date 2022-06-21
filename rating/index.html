@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans&display=swap" rel="stylesheet">
+    <script src="rate.js"></script>
+    <title>Rating</title>
+</head>
+<body>
+    <div class="objects">
+
+        <div class="rate-container">
+            <div class="star item">
+                <img src="images/icon-star.svg" alt="" class="star-image">
+            </div>
+            <div class="title item">How did we do?</div>
+            <div class="text item">Please let us know how we did with your support request. All feedback is appriciated tp help us improve our offering!</div>
+            <div class="rating item">
+                <button onclick="rateClicked(this, 1)" class="rate-button">1</button>
+                <button onclick="rateClicked(this, 2)" class="rate-button">2</button>
+                <button onclick="rateClicked(this, 3)" class="rate-button">3</button>
+                <button onclick="rateClicked(this, 4)" class="rate-button">4</button>
+                <button onclick="rateClicked(this, 5)" class="rate-button">5</button>
+            </div>
+            <div onclick="submit()" class="submit item">Submit</div>
+        </div>
+
+        <div class="thankyou-container hide">
+            <img class="ty-image" src="images/illustration-thank-you.svg" alt="">
+            <div class="ty-rate"></div>
+            <div class="ty-title">Thank you!</div>
+            <div class="ty-text">We appreciated you taking your time to give us a rating. If you ever need more support, don't hesitate to get in touch!</div>
+        </div>
+    </div>
+</body>
+</html>
