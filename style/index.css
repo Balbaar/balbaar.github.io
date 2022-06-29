@@ -17,12 +17,12 @@ a{
     --green4: #0C8D64;
     --green5: #037868;
 
-    --topbar-height: 6vh;
 }
 
 
 body{
     display: grid;
+    color: white;
 }
 
 header{
@@ -41,6 +41,8 @@ main{
 
 footer{
     background-color: var(--green5);
+    display: flex;
+    justify-content: space-between;
 }
 
 /*Header*/
@@ -51,6 +53,7 @@ footer{
 }
 
 .tb-title{
+    background-color: var(--green4);
     width: fit-content;
     height: fit-content;
     text-align: center;
@@ -59,6 +62,7 @@ footer{
     padding-top: 0.8rem;
     padding-bottom: 0.8rem;
     padding-left: 2vw;
+    padding-right: 2vw;
 }
 
 .tb-about-container-2{
@@ -159,18 +163,88 @@ footer{
     font-style: italic;
 }
 
-.about-container{
+.main-about-container{
     background-color: var(--green2);
-    width: 20%;
-    padding: 2rem;
-    margin-top: 5%;
+    border-radius: 10px;
+    width: 40%;
+    margin-top: 20vh;
+    margin-bottom: 30vh;
     margin-left: 5%;
     min-width: 300px;
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+.main-about{
+    padding: 2rem;
+    
+}
+
+.main-about-title{
+    display: grid;
+    margin-bottom: 1rem;
+}
+
+.main-about-title h1{
+    width: fit-content;
+    color: white;
+}
+
+.main-about-title h2{
+    color:gainsboro;
+    grid-column: 1;
+    font-style: italic;
+}
+
+.main-about-title img{
+    outline: 5px var(--green4) solid;
+    width: 40vh;
+    max-width: 150px;
+    border-radius: 50%;
+    grid-column: 2;
 }
 
 
-/*Effect styling*/
+/*Footer*/
+.foot-contact-socialmedia{
+    width: fit-content;
+    display: grid;
+    align-content: center;
+    margin-left: 5vh;
+}
 
+.foot-instagram{
+    width: 60px;
+    transition: 0.2s ease-in-out;
+    
+}
+
+.foot-instagram:hover{
+    transform: scale(1.1);
+}
+
+.foot-contact-info{
+    margin: 2rem;
+    margin-right: 20%;
+    display: grid;
+    grid-row-gap: 20px;
+}
+
+.foot-contact-info > *{
+}
+
+.foot-contact-info > * > h1{
+    font-size: 1.5rem;
+}
+
+
+
+
+
+
+
+/*Effect styling*/
 .line-under-container{
     display: inline-block;
     position: relative;
@@ -211,13 +285,25 @@ Hide elements that are not required for easy navigation in a mobile enviroment
         display: block;
     }
 
+    main{
+        background-image: url(../assets/Kungsangsliljor.jpg);
+        background-repeat:repeat-y;
+        background-position: -90vw;
+    }
+
     .main-title{
         font-size: 7vw;
+        margin-top: 4rem;
     }
     
     .main-quote{
         font-size: 5vw;
     }
 
+    .main-about-container{
+        margin-left: 0;
+        width: 100%;
+        max-width: 600px;
+    }
     
 }
