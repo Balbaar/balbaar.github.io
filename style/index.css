@@ -1,0 +1,223 @@
+*, *::after, *::before{
+    box-sizing: border-box;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: normal;
+    margin: 0;
+    padding: 0;
+}
+
+a{
+    text-decoration: none;
+}
+
+:root{
+    --green1: #54BE68;
+    --green2: #2CB060;
+    --green3: #1AA261;
+    --green4: #0C8D64;
+    --green5: #037868;
+
+    --topbar-height: 6vh;
+}
+
+
+body{
+    display: grid;
+}
+
+header{
+    background-color: var(--green1);
+    display: flex;
+    position: relative;
+}
+
+main{
+    background-color: var(--green3);
+    background-image: url(/tradgardshjalpen/assets/Kungsangsliljor.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: -2;
+}
+
+footer{
+    background-color: var(--green5);
+}
+
+/*Header*/
+
+.topbar-container{
+    width: 100vw;
+    display: flex;
+}
+
+.tb-title{
+    width: fit-content;
+    height: fit-content;
+    text-align: center;
+    color: white;
+    font-size: 2rem;
+    padding-top: 0.8rem;
+    padding-bottom: 0.8rem;
+    padding-left: 2vw;
+}
+
+.tb-about-container-2{
+    padding-top: 1.2rem;
+    margin-left: 10%;
+    
+}
+
+.tb-about-2{
+    color: white;
+    font-size: 1.5rem;
+}
+
+.tb-gallery-container-2{
+    padding-top: 1.2rem;
+    margin-left: 10%;
+}
+
+.tb-gallery-2{
+    color: white;
+    font-size: 1.5rem;
+}
+
+/*For mobile dropdown menu*/
+.tb-menu-icon{
+    height: 3.5rem;
+    padding-top: 0.5rem;
+    margin-left: auto;
+    margin-right: 2vw;
+    display: none;
+}
+
+.dropdown-container{
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--green2);
+    border-radius: 0 20px 20px 0px;
+    width: 90vw;
+    position: absolute;
+    z-index: -1;
+    margin-top: 3.8rem;
+    
+    transition: 0.2s ease-in-out;
+}
+
+.hide-dropdown{
+    transform: translateX(-100vw);
+}
+
+.tb-about-container{
+    margin-left: 10%;
+}
+
+.tb-about{
+    color: white;
+    font-size: 1.5rem;
+    margin-bottom: 0.7rem;
+    margin-top: 0.7rem;
+    margin-left: 1rem;
+}
+
+.tb-gallery-container{
+    margin-right: 10%;
+}
+
+.tb-gallery{
+    color: white;
+    font-size: 1.5rem;
+    margin-bottom: 0.7rem;
+    margin-top: 0.7rem;
+    
+}
+/*END*/
+
+
+/*Main*/
+
+.main-title-container{
+    display: flex;
+    justify-content: center;
+}
+
+.main-title-text{
+    margin-top: 5%;
+    width: fit-content;
+}
+
+.main-title{
+    color: white;
+    font-weight: 550;
+    font-size: 3vw;
+}
+
+.main-quote{
+    color: whitesmoke;
+    font-size: 2vw;
+    text-align: center;
+    font-style: italic;
+}
+
+.about-container{
+    background-color: var(--green2);
+    width: 20%;
+    padding: 2rem;
+    margin-top: 5%;
+    margin-left: 5%;
+    min-width: 300px;
+}
+
+
+/*Effect styling*/
+
+.line-under-container{
+    display: inline-block;
+    position: relative;
+}
+
+.line-under::after{
+    content: "";
+    background-color: white;
+    position: absolute;
+    bottom: 1rem;
+    left: 0;
+    right: 0;
+    width: 0;
+    height: 2px;
+    
+    transition: 0.2s ease-in-out;
+}
+
+.line-under-container:hover > .line-under::after{
+    width: 100%;
+}
+
+
+/*
+Mobile Styling
+
+Change font sizes
+Hide elements that are not required for easy navigation in a mobile enviroment
+*/
+
+@media (pointer:none), (pointer:coarse) {
+    
+    .computer{
+        display: none;
+    }
+
+    .tb-menu-icon{
+        display: block;
+    }
+
+    .main-title{
+        font-size: 7vw;
+    }
+    
+    .main-quote{
+        font-size: 5vw;
+    }
+
+    
+}

@@ -4,38 +4,62 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
-    <link rel="stylesheet" href="styles/index.css">
+    <link rel="stylesheet" href="style/index.css">
+    <script src="script.js"></script>
+    <title>Trädgårdhjälpen</title>
 </head>
 <body>
-    <header class="topbar">
-        <div class="topbar-title">My Projects</div>
+    <header>
+        <div class="topbar-container">
+            <div class="tb-title">Trädgårdshjälpen</div>
+            <a href="#" class="tb-about-container-2 computer line-under-container">
+                <div class="tb-about-2 computer line-under">Vilka är vi?</div>
+            </a>
+
+            <a href="#" class="tb-gallery-container-2 computer line-under-container">
+                <div class="tb-gallery-2 computer line-under">Bildgalleri</div>
+            </a>
+            
+            <img onclick="toggleDropdown()" id="dropdown-icon" class="tb-menu-icon" src="assets/icons/menu.png" alt="">
+
+            <div id="dropdown" class="dropdown-container hide-dropdown">
+                <a href="#" class="tb-about-container">
+                    <div class="tb-about">Vilka är vi?</div>
+                </a>
+
+                <a href="#" class="tb-gallery-container">
+                    <div class="tb-gallery">Bildgalleri</div>
+                </a>
+            </div>
+
+        </div>
     </header>
-    <div class="content">
-        <a target="_blank" href="calculator/index.html">
-            <div class="project">
-                <div class="container">
-                    <h1>Calculator</h1>
-                    <img src="assets/calculator.png" alt="">
-                    <div class="overlay">
-                        <div class="overlay-text">A simple calculator made using HTML, CSS and JavaScript.</div>
-                    </div>
-                    <h2>2022 - 06 - 14</h2>
+    
+    <main>
+        <div class="main-title-container">
+            <div class="main-title-text">
+                <div class="main-title">Trädgårdshjälpen | Glumslöv</div>
+                <div class="main-quote">för en grönare trädgård</div>
+            </div>
+        </div>
+
+        <div class="about-container">
+            <div class="about">
+                <div class="about-title">
+                    Trädgårdsmästare och anläggare Pär Hansson hälsar välkommen till vår hemsida! 
+                </div>
+                <div class="about-text">
+                    Vårt företag riktar sig till er med villa, radhus, fritidshus eller annat boende där en trädgård en gång fanns men under årens lopp tappat sin forna glans och känns endast som en börda. Där kommer jag till hands med viljan och kraften att förändra. Jag vill hjälpa er som saknar idéer och tid att skapa något nytt eller ta hand om och sköta den trädgården ni har.
                 </div>
             </div>
-            <a target="_blank" href="rating/index.html">
-                <div class="project">
-                    <div class="container">
-                        <h1>Rating</h1>
-                        <img src="assets/rating.PNG" alt="">
-                        <div class="overlay">
-                            <div class="overlay-text">Rating interface made using HTML, CSS and JavaScript.</div>
-                        </div>
-                        <h2>2022 - 06 - 20</h2>
-                    </div>
-                </div>
-            </a>
-        </a>
-    </div>
+        </div>
+
+        <!--Side menu-->
+    </main>
+
+    <footer>
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptates vero fuga facere voluptatum? Ab, harum corporis. Fugiat quo, sequi, aliquid facere natus molestias, maxime doloremque ex aperiam ad eligendi laudantium corporis? Voluptatem, reprehenderit. Non sed cumque autem? Dignissimos iusto vel voluptas ullam? Perferendis excepturi omnis inventore. Laudantium nostrum ipsa, a hic at dicta magnam nemo non, eum, adipisci saepe odio omnis? Ad quos provident laborum excepturi quam hic impedit iste eum accusantium soluta animi dolorem id saepe, sequi rem voluptatum voluptate modi odio in temporibus ipsum quaerat nulla. At, doloremque dolorem eos esse quos quo explicabo aut distinctio beatae ratione!
+    </footer>
+
 </body>
 </html>
