@@ -33,7 +33,7 @@ header{
 
 main{
     background-color: var(--green3);
-    background-image: url(/tradgardshjalpen/assets/Kungsangsliljor.jpg);
+    background-image: url(/assets/Kungsangsliljor.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     z-index: -2;
