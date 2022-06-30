@@ -48,14 +48,14 @@ footer{
 /*Header*/
 
 .topbar-container{
-    width: 100vw;
+    width: 100%;
     display: flex;
+    justify-content: space-between;
 }
 
 .tb-title{
     background-color: var(--green4);
     width: fit-content;
-    height: fit-content;
     text-align: center;
     color: white;
     font-size: 2rem;
@@ -67,7 +67,6 @@ footer{
 
 .tb-about-container-2{
     padding-top: 1.2rem;
-    margin-left: 10%;
     
 }
 
@@ -78,7 +77,7 @@ footer{
 
 .tb-gallery-container-2{
     padding-top: 1.2rem;
-    margin-left: 10%;
+    margin-right: 40%;
 }
 
 .tb-gallery-2{
@@ -89,10 +88,9 @@ footer{
 /*For mobile dropdown menu*/
 .tb-menu-icon{
     height: 3.5rem;
-    padding-top: 0.5rem;
-    margin-left: auto;
-    margin-right: 2vw;
     display: none;
+    align-self: center;
+    margin-right: 20px;
 }
 
 .dropdown-container{
@@ -105,7 +103,7 @@ footer{
     z-index: -1;
     margin-top: 3.8rem;
     
-    transition: 0.2s ease-in-out;
+    transition: 0.3s ease-in-out;
 }
 
 .hide-dropdown{
@@ -118,10 +116,10 @@ footer{
 
 .tb-about{
     color: white;
-    font-size: 1.5rem;
-    margin-bottom: 0.7rem;
-    margin-top: 0.7rem;
-    margin-left: 1rem;
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+    margin-left: 0.2rem;
 }
 
 .tb-gallery-container{
@@ -130,9 +128,9 @@ footer{
 
 .tb-gallery{
     color: white;
-    font-size: 1.5rem;
-    margin-bottom: 0.7rem;
-    margin-top: 0.7rem;
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
     
 }
 /*END*/
@@ -198,7 +196,6 @@ footer{
 }
 
 .main-about-title img{
-    outline: 5px var(--green4) solid;
     width: 40vh;
     max-width: 150px;
     border-radius: 50%;
@@ -288,7 +285,7 @@ Hide elements that are not required for easy navigation in a mobile enviroment
     main{
         background-image: url(../assets/Kungsangsliljor.jpg);
         background-repeat:repeat-y;
-        background-position: -90vw;
+        background-position: -20vw;
     }
 
     .main-title{
