@@ -1,6 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300&display=swap');
+
 *, *::after, *::before{
     box-sizing: border-box;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: 'Inter', sans-serif;
     font-weight: normal;
     margin: 0;
     padding: 0;
@@ -37,12 +39,15 @@ main{
     background-repeat: no-repeat;
     background-size: cover;
     z-index: -2;
+    height: 100vh;
+
+    
 }
 
 footer{
     background-color: var(--green5);
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 2;
 }
 
 /*Header*/
@@ -59,6 +64,7 @@ footer{
     text-align: center;
     color: white;
     font-size: 2rem;
+    font-weight: 600;
     padding-top: 0.8rem;
     padding-bottom: 0.8rem;
     padding-left: 2vw;
@@ -87,7 +93,7 @@ footer{
 
 /*For mobile dropdown menu*/
 .tb-menu-icon{
-    height: 3.5rem;
+    height: 3rem;
     display: none;
     align-self: center;
     margin-right: 20px;
@@ -137,21 +143,30 @@ footer{
 
 
 /*Main*/
+.main-container{
+    display: grid;
+    grid-template-columns: 35% 1fr 35%
+}
 
 .main-title-container{
     display: flex;
     justify-content: center;
+
+    grid-row: 1;
+    grid-column: 1/4;
 }
 
 .main-title-text{
     margin-top: 5%;
     width: fit-content;
+    text-align: center;
 }
 
 .main-title{
     color: white;
     font-weight: 550;
     font-size: 3vw;
+    font-weight: 500;
 }
 
 .main-quote{
@@ -161,46 +176,58 @@ footer{
     font-style: italic;
 }
 
-.main-about-container{
+.main-per-container{
     background-color: var(--green2);
     border-radius: 10px;
-    width: 40%;
-    margin-top: 20vh;
-    margin-bottom: 30vh;
-    margin-left: 5%;
     min-width: 300px;
     display: flex;
     flex-wrap: wrap;
+    margin-left: 10%;
+    margin-top: 15%;
 
+    grid-row: 2;
+    grid-column: 1;
 }
 
-.main-about{
+.main-per{
     padding: 2rem;
-    
-}
-
-.main-about-title{
     display: grid;
     margin-bottom: 1rem;
 }
 
-.main-about-title h1{
+.main-per h1{
     width: fit-content;
     color: white;
 }
 
-.main-about-title h2{
+.main-per h2{
     color:gainsboro;
+    font-size: 1.5rem;
     grid-column: 1;
     font-style: italic;
 }
 
-.main-about-title img{
+.main-per img{
     width: 40vh;
     max-width: 150px;
     border-radius: 50%;
     grid-column: 2;
 }
+
+.main-about-container{
+    background-color: var(--green2);
+    border-radius: 10px;
+    margin-right: 15%;
+    margin-top: -10%;
+
+    grid-row: 3;
+    grid-column: 3/4;
+}
+
+.main-about-text{
+    padding: 2rem;
+}
+
 
 
 /*Footer*/
@@ -209,6 +236,7 @@ footer{
     display: grid;
     align-content: center;
     margin-left: 5vh;
+    grid-column: 1;
 }
 
 .foot-instagram{
@@ -226,6 +254,7 @@ footer{
     margin-right: 20%;
     display: grid;
     grid-row-gap: 20px;
+    grid-column: 2;
 }
 
 .foot-contact-info > *{
@@ -234,10 +263,6 @@ footer{
 .foot-contact-info > * > h1{
     font-size: 1.5rem;
 }
-
-
-
-
 
 
 
@@ -286,21 +311,49 @@ Hide elements that are not required for easy navigation in a mobile enviroment
         background-image: url(../assets/Kungsangsliljor.jpg);
         background-repeat:repeat-y;
         background-position: -20vw;
+        height: auto;
+    }
+    
+    .main-container{
+        display: flex;
+        flex-wrap: wrap;
     }
 
     .main-title{
-        font-size: 7vw;
+        font-size: 10vw;
         margin-top: 4rem;
     }
     
     .main-quote{
-        font-size: 5vw;
+        font-size: 6vw;
+    }
+
+    .main-per-container{
+        margin-left: 5%;
+        margin-right: 5%;
+        margin-top: 2rem;
+    }
+
+    .main-per img{
+        width: 120px;
+        margin-top: -40px;
     }
 
     .main-about-container{
-        margin-left: 0;
-        width: 100%;
-        max-width: 600px;
+        margin-left: 5%;
+        margin-right: 5%;
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+    }
+
+    .foot-contact-socialmedia{
+        grid-row: 1;
+        margin-top: 2rem;
+    }
+
+    .foot-contact-info{
+        grid-row: 2;
+        grid-column: 1/2;
     }
     
 }
