@@ -25,6 +25,8 @@ a{
 body{
     display: grid;
     color: white;
+    overflow-x: hidden;
+    
 }
 
 header{
@@ -35,13 +37,11 @@ header{
 
 main{
     background-color: var(--green3);
-    background-image: url(../assets/image_50423041.JPG);
+    background-image: url(../assets/background.jpg);
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: 100vw ;
     z-index: -2;
-    height: 100vh;
-    overflow: hidden;
-
+    
     
 }
 
@@ -49,12 +49,14 @@ footer{
     background-color: var(--green5);
     display: grid;
     grid-template-columns: 2;
+    
+
 }
 
 /*Header*/
 
 .topbar-container{
-    width: 100%;
+    width: 100vw;
     display: flex;
     justify-content: space-between;
 }
@@ -146,21 +148,25 @@ footer{
 /*Main*/
 .main-container{
     display: grid;
-    grid-template-columns: 35% 1fr 35%
 }
 
 .main-title-container{
     display: flex;
     justify-content: center;
+    margin-top: 6rem;
+    margin-bottom: 26rem;
 
     grid-row: 1;
     grid-column: 1/4;
 }
 
 .main-title-text{
-    margin-top: 5%;
     width: fit-content;
     text-align: center;
+    padding: 1rem;
+    
+    border: white solid;
+    border-width: 4px 0px 4px 0px;
 }
 
 .main-title{
@@ -175,6 +181,81 @@ footer{
     font-size: 2vw;
     text-align: center;
     font-style: italic;
+}
+
+.white-section {
+    display: flex;
+    justify-content: space-around;
+
+    width: 100vw;
+    background-color: white;
+    position: relative;
+    z-index: 1;
+}
+
+.white-section > img {
+    position: absolute;
+    left: 0;
+    
+    width: 25rem;
+    z-index: 2;
+}
+
+.white-section > img:nth-child(2) {
+    right: 0;
+    left: auto;
+    transform: rotateY(180deg);
+}
+
+.green-section {
+    margin-top: 3rem;
+    width: 60vw;
+    height: fit-content;
+    background-color: var(--green3);
+    z-index: 3;
+    padding-bottom: 2rem;
+}
+
+.main-content-container {
+    padding: 2rem;
+    display: grid;
+    grid-template-columns: 40% 14% 40%;
+    gap: 3%;
+}
+
+.main-content-container > img {
+    width: 100%;
+    border: 4px white solid;
+    border-radius: 10px;
+}
+
+.main-cont-1 {
+    grid-column: 2;
+    background-color: var(--green2);
+    padding: 1rem;
+    height: fit-content;
+    width: 100%;
+
+    grid-column: 3/4;
+}
+
+.main-cont-1 > .title {
+    font-size: 2rem;
+    font-weight: 500;
+}
+
+.main-cont-1 > ul {
+    font-size: 1.5rem;
+    margin-top: 2rem;
+    margin-left: 2rem;
+}
+
+.main-cont-1 > ul > li {
+    margin-top: 1rem;
+}
+
+.main-content-container > img:nth-child(3) {
+    grid-column: 2/4;
 }
 
 
@@ -267,9 +348,9 @@ Hide elements that are not required for easy navigation in a mobile enviroment
     }
 
     main{
-        background-image: url(../assets/Kungsangsliljor.jpg);
-        background-repeat:repeat-y;
-        background-position: -20vw;
+        background-image: url(../assets/background.jpg);
+        background-size: auto 20rem;
+        background-position-x: center;
         height: auto;
     }
     
@@ -278,13 +359,20 @@ Hide elements that are not required for easy navigation in a mobile enviroment
         flex-wrap: wrap;
     }
 
+    .main-title-container {
+        margin-top: 3rem;
+        margin-bottom: 8rem;
+    }
+
     .main-title{
         font-size: 10vw;
-        margin-top: 4rem;
     }
     
     .main-quote{
         font-size: 6vw;
+    }
+
+    .white-section {
     }
 
     .foot-contact-socialmedia{
