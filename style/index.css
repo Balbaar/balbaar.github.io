@@ -35,13 +35,7 @@ header{
     position: relative;
 }
 
-main{
-    background-color: var(--green3);
-    background-image: url(../assets/background.jpg);
-    background-repeat: no-repeat;
-    background-size: 100vw ;
-    z-index: -2;
-    
+main{  
     
 }
 
@@ -107,7 +101,7 @@ footer{
     justify-content: space-between;
     background-color: var(--green2);
     border-radius: 0 20px 20px 0px;
-    width: 90vw;
+    width: 100vw;
     position: absolute;
     z-index: -1;
     margin-top: 3.8rem;
@@ -148,13 +142,24 @@ footer{
 /*Main*/
 .main-container{
     display: grid;
+    
+}
+
+.main-background{
+    background-image: url(../assets/background.jpg);
+    background-repeat: no-repeat;
+    background-size:cover;
+    z-index: -2;
+
+
+    grid-column: 1/4;
 }
 
 .main-title-container{
     display: flex;
     justify-content: center;
     margin-top: 6rem;
-    margin-bottom: 26rem;
+    margin-bottom: 26vw;
 
     grid-row: 1;
     grid-column: 1/4;
@@ -183,11 +188,14 @@ footer{
     font-style: italic;
 }
 
+.main-content{
+    grid-column: 1/4;
+}
+
 .white-section {
     display: flex;
     justify-content: space-around;
 
-    width: 100vw;
     background-color: white;
     position: relative;
     z-index: 1;
@@ -196,7 +204,6 @@ footer{
 .white-section > img {
     position: absolute;
     left: 0;
-    
     width: 25rem;
     z-index: 2;
 }
@@ -205,15 +212,18 @@ footer{
     right: 0;
     left: auto;
     transform: rotateY(180deg);
+    z-index: 1;
+
 }
 
 .green-section {
-    margin-top: 3rem;
+    background-color: var(--green3);
     width: 60vw;
     height: fit-content;
-    background-color: var(--green3);
-    z-index: 3;
+    margin-top: 3rem;
     padding-bottom: 2rem;
+    border-radius: 1rem;
+    z-index: 3;
 }
 
 .main-content-container {
@@ -347,33 +357,46 @@ Hide elements that are not required for easy navigation in a mobile enviroment
         display: block;
     }
 
-    main{
-        background-image: url(../assets/background.jpg);
-        background-size: auto 20rem;
-        background-position-x: center;
-        height: auto;
-    }
-    
-    .main-container{
-        display: flex;
-        flex-wrap: wrap;
-    }
-
     .main-title-container {
         margin-top: 3rem;
         margin-bottom: 8rem;
     }
 
     .main-title{
-        font-size: 10vw;
+        font-size: 2rem;
     }
     
     .main-quote{
-        font-size: 6vw;
+        font-size: 1.4rem;
+    }
+
+    .main-content{
+        width: 100%;
     }
 
     .white-section {
+        margin: 0;
     }
+
+    .white-section > img {
+        width: 15rem;
+    }
+    
+    .white-section > img:nth-child(2) {
+    
+    }
+
+    .green-section{
+        width: 90vw;
+    }
+
+    .main-content-container{
+        display: flex;
+        flex-wrap: wrap;
+        row-gap: 2rem;
+    }
+
+
 
     .foot-contact-socialmedia{
         grid-row: 1;
