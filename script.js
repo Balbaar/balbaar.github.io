@@ -8,7 +8,6 @@ function init(){
 }
 
 function toggleDropdown() {
-    dropdownMenu.classList.toggle("hide-dropdown");
-    
+    dropdownMenu.classList.toggle("hide-dropdown");  
 }
 
