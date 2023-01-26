@@ -1,0 +1,524 @@
+*, *::after, *::before{
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+    font-weight: normal;
+    margin: 0;
+    padding: 0;
+    color: white;
+}
+
+:root {
+    --block: 6vmin;
+}
+
+main {
+    background-color: black;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: space-around;
+}
+
+.timer {
+    display: flex;
+    position: relative;
+    top: 50%;
+    transform: translateY(-25%);
+}
+
+
+.digit, .dots {
+    position: relative;
+    width: calc(var(--block) * 3);
+    height: calc(var(--block) * 5);
+
+    transition: 0.2s ease-in-out;
+}
+
+.dots {
+    width: var(--block);
+    position: relative;
+}
+
+.dots > span {
+    width: var(--block);
+    height: var(--block);
+    background-color: white;
+    position: absolute;
+}
+
+.dots > span:nth-child(1) {
+    top: calc(var(--block) * 1);
+}
+.dots > span:nth-child(2) {
+    top: calc(var(--block) * 3);
+}
+
+.digit-1, .digit-2, .digit-3, .dots {
+    margin-right: var(--block);
+}
+
+
+
+.digit > span {
+    position: absolute;
+    background-color: white;
+    outline: 1px white solid;
+    width: var(--block);
+    height: var(--block);
+    top: 0;
+    left: 0;
+    transition: 0.2s ease-in-out;
+
+}
+
+
+.num-1 > span{
+    left: calc(var(--block) * 2);
+}
+.num-1 > *:nth-child(2){
+    top: calc(var(--block) * 1);
+    left: calc(var(--block) * 2);
+}
+.num-1 > *:nth-child(3){
+    top: calc(var(--block) * 2);
+    left: calc(var(--block) * 2);
+}
+.num-1 > *:nth-child(4){
+    top: calc(var(--block) * 3);
+    left: calc(var(--block) * 2);
+}
+.num-1 > *:nth-child(5){
+    top: calc(var(--block) * 4);
+    left: calc(var(--block) * 2);
+}
+
+
+.num-2 > *:nth-child(1){
+    top: calc(var(--block) * 0);
+    left: calc(var(--block) * 1);
+}
+.num-2 > *:nth-child(2){
+    top: calc(var(--block) * 0);
+    left: calc(var(--block) * 2);
+}
+.num-2 > *:nth-child(3){
+    top: calc(var(--block) * 1);
+    left: calc(var(--block) * 2);
+}
+.num-2 > *:nth-child(4){
+    top: calc(var(--block) * 2);
+    left: calc(var(--block) * 2);
+}
+.num-2 > *:nth-child(5){
+    top: calc(var(--block) * 2);
+    left: calc(var(--block) * 1);
+}
+.num-2 > *:nth-child(6){
+    top: calc(var(--block) * 2);
+    left: calc(var(--block) * 0);
+}
+.num-2 > *:nth-child(7){
+    top: calc(var(--block) * 3);
+    left: calc(var(--block) * 0);
+}
+.num-2 > *:nth-child(8){
+    top: calc(var(--block) * 4);
+    left: calc(var(--block) * 0);
+}
+.num-2 > *:nth-child(9){
+    top: calc(var(--block) * 4);
+    left: calc(var(--block) * 1);
+}
+.num-2 > *:nth-child(10){
+    top: calc(var(--block) * 4);
+    left: calc(var(--block) * 2);
+}
+
+
+.num-3 > *:nth-child(1){
+    top: calc(var(--block) * 0);
+    left: calc(var(--block) * 1);
+}
+.num-3 > *:nth-child(2){
+    top: calc(var(--block) * 0);
+    left: calc(var(--block) * 2);
+}
+.num-3 > *:nth-child(3){
+    top: calc(var(--block) * 1);
+    left: calc(var(--block) * 2);
+}
+.num-3 > *:nth-child(4){
+    top: calc(var(--block) * 2);
+    left: calc(var(--block) * 2);
+}
+.num-3 > *:nth-child(5){
+    top: calc(var(--block) * 2);
+    left: calc(var(--block) * 1);
+}
+.num-3 > *:nth-child(6){
+    top: calc(var(--block) * 3);
+    left: calc(var(--block) * 2);
+}
+.num-3 > *:nth-child(7){
+    top: calc(var(--block) * 4);
+    left: calc(var(--block) * 2);
+}
+.num-3 > *:nth-child(8){
+    top: calc(var(--block) * 4);
+    left: calc(var(--block) * 1);
+}
+.num-3 > *:nth-child(9){
+    top: calc(var(--block) * 4);
+    left: calc(var(--block) * 0);
+}
+
+
+.num-4 > *:nth-child(1){
+    top: calc(var(--block) * 1);
+    left: calc(var(--block) * 0);
+}
+.num-4 > *:nth-child(2){
+    top: calc(var(--block) * 2);
+    left: calc(var(--block) * 0);
+}
+.num-4 > *:nth-child(3){
+    top: calc(var(--block) * 2);
+    left: calc(var(--block) * 1);
+}
+.num-4 > *:nth-child(4){
+    top: calc(var(--block) * 2);
+    left: calc(var(--block) * 2);
+}
+.num-4 > *:nth-child(5){
+    top: calc(var(--block) * 1);
+    left: calc(var(--block) * 2);
+}
+.num-4 > *:nth-child(6){
+    top: calc(var(--block) * 0);
+    left: calc(var(--block) * 2);
+}
+.num-4 > *:nth-child(7){
+    top: calc(var(--block) * 3);
+    left: calc(var(--block) * 2);
+}
+.num-4 > *:nth-child(8){
+    top: calc(var(--block) * 4);
+    left: calc(var(--block) * 2);
+}
+
+
+
+.num-5 > *:nth-child(1){
+    top: calc(var(--block) * 0);
+    left: calc(var(--block) * 1);
+}
+.num-5 > *:nth-child(2){
+    top: calc(var(--block) * 0);
+    left: calc(var(--block) * 2);
+}
+.num-5 > *:nth-child(3){
+    top: calc(var(--block) * 1);
+    left: calc(var(--block) * 0);
+}
+.num-5 > *:nth-child(4){
+    top: calc(var(--block) * 2);
+    left: calc(var(--block) * 2);
+}
+.num-5 > *:nth-child(5){
+    top: calc(var(--block) * 2);
+    left: calc(var(--block) * 1);
+}
+.num-5 > *:nth-child(6){
+    top: calc(var(--block) * 2);
+    left: calc(var(--block) * 0);
+}
+.num-5 > *:nth-child(7){
+    top: calc(var(--block) * 3);
+    left: calc(var(--block) * 2);
+}
+.num-5 > *:nth-child(8){
+    top: calc(var(--block) * 4);
+    left: calc(var(--block) * 0);
+}
+.num-5 > *:nth-child(9){
+    top: calc(var(--block) * 4);
+    left: calc(var(--block) * 1);
+}
+.num-5 > *:nth-child(10){
+    top: calc(var(--block) * 4);
+    left: calc(var(--block) * 2);
+}
+
+
+
+.num-6 > *:nth-child(1){
+    top: calc(var(--block) * 0);
+    left: calc(var(--block) * 1);
+}
+.num-6 > *:nth-child(2){
+    top: calc(var(--block) * 0);
+    left: calc(var(--block) * 2);
+}
+.num-6 > *:nth-child(3){
+    top: calc(var(--block) * 1);
+    left: calc(var(--block) * 0);
+}
+.num-6 > *:nth-child(4){
+    top: calc(var(--block) * 2);
+    left: calc(var(--block) * 2);
+}
+.num-6 > *:nth-child(5){
+    top: calc(var(--block) * 2);
+    left: calc(var(--block) * 1);
+}
+.num-6 > *:nth-child(6){
+    top: calc(var(--block) * 2);
+    left: calc(var(--block) * 0);
+}
+.num-6 > *:nth-child(7){
+    top: calc(var(--block) * 3);
+    left: calc(var(--block) * 2);
+}
+.num-6 > *:nth-child(8){
+    top: calc(var(--block) * 4);
+    left: calc(var(--block) * 0);
+}
+.num-6 > *:nth-child(9){
+    top: calc(var(--block) * 4);
+    left: calc(var(--block) * 1);
+}
+.num-6 > *:nth-child(10){
+    top: calc(var(--block) * 4);
+    left: calc(var(--block) * 2);
+}
+.num-6 > *:nth-child(11){
+    top: calc(var(--block) * 3);
+    left: calc(var(--block) * 0);
+}
+
+
+
+.num-7 > *:nth-child(1){
+    top: calc(var(--block) * 0);
+    left: calc(var(--block) * 2);
+}
+.num-7 > *:nth-child(2){
+    top: calc(var(--block) * 1);
+    left: calc(var(--block) * 2);
+}
+.num-7 > *:nth-child(3){
+    top: calc(var(--block) * 2);
+    left: calc(var(--block) * 2);
+}
+.num-7 > *:nth-child(4){
+    top: calc(var(--block) * 3);
+    left: calc(var(--block) * 2);
+}
+.num-7 > *:nth-child(5){
+    top: calc(var(--block) * 4);
+    left: calc(var(--block) * 2);
+}
+.num-7 > *:nth-child(6){
+    top: calc(var(--block) * 0);
+    left: calc(var(--block) * 1);
+}
+
+
+
+.num-8 > *:nth-child(1){
+    top: calc(var(--block) * 0);
+    left: calc(var(--block) * 1);
+}
+.num-8 > *:nth-child(2){
+    top: calc(var(--block) * 0);
+    left: calc(var(--block) * 2);
+}
+.num-8 > *:nth-child(3){
+    top: calc(var(--block) * 1);
+    left: calc(var(--block) * 0);
+}
+.num-8 > *:nth-child(4){
+    top: calc(var(--block) * 2);
+    left: calc(var(--block) * 2);
+}
+.num-8 > *:nth-child(5){
+    top: calc(var(--block) * 2);
+    left: calc(var(--block) * 1);
+}
+.num-8 > *:nth-child(6){
+    top: calc(var(--block) * 2);
+    left: calc(var(--block) * 0);
+}
+.num-8 > *:nth-child(7){
+    top: calc(var(--block) * 3);
+    left: calc(var(--block) * 2);
+}
+.num-8 > *:nth-child(8){
+    top: calc(var(--block) * 4);
+    left: calc(var(--block) * 0);
+}
+.num-8 > *:nth-child(9){
+    top: calc(var(--block) * 4);
+    left: calc(var(--block) * 1);
+}
+.num-8 > *:nth-child(10){
+    top: calc(var(--block) * 4);
+    left: calc(var(--block) * 2);
+}
+.num-8 > *:nth-child(11){
+    top: calc(var(--block) * 3);
+    left: calc(var(--block) * 0);
+}
+.num-8 > *:nth-child(12){
+    top: calc(var(--block) * 1);
+    left: calc(var(--block) * 2);
+}
+
+
+
+.num-9 > *:nth-child(1){
+    top: calc(var(--block) * 0);
+    left: calc(var(--block) * 1);
+}
+.num-9 > *:nth-child(2){
+    top: calc(var(--block) * 0);
+    left: calc(var(--block) * 2);
+}
+.num-9 > *:nth-child(3){
+    top: calc(var(--block) * 1);
+    left: calc(var(--block) * 2);
+}
+.num-9 > *:nth-child(4){
+    top: calc(var(--block) * 2);
+    left: calc(var(--block) * 2);
+}
+.num-9 > *:nth-child(5){
+    top: calc(var(--block) * 2);
+    left: calc(var(--block) * 1);
+}
+.num-9 > *:nth-child(6){
+    top: calc(var(--block) * 2);
+    left: calc(var(--block) * 0);
+}
+.num-9 > *:nth-child(7){
+    top: calc(var(--block) * 1);
+    left: calc(var(--block) * 0);
+}
+.num-9 > *:nth-child(8){
+    top: calc(var(--block) * 3);
+    left: calc(var(--block) * 2);
+}
+.num-9 > *:nth-child(9){
+    top: calc(var(--block) * 4);
+    left: calc(var(--block) * 2);
+}
+.num-9 > *:nth-child(10){
+    top: calc(var(--block) * 4);
+    left: calc(var(--block) * 1);
+}
+.num-9 > *:nth-child(11){
+    top: calc(var(--block) * 4);
+    left: calc(var(--block) * 0);
+}
+
+
+
+.num-0 > *:nth-child(1){
+    top: calc(var(--block) * 0);
+    left: calc(var(--block) * 1);
+}
+.num-0 > *:nth-child(2){
+    top: calc(var(--block) * 0);
+    left: calc(var(--block) * 2);
+}
+.num-0 > *:nth-child(3){
+    top: calc(var(--block) * 1);
+    left: calc(var(--block) * 2);
+}
+.num-0 > *:nth-child(4){
+    top: calc(var(--block) * 2);
+    left: calc(var(--block) * 2);
+}
+.num-0 > *:nth-child(5){
+    top: calc(var(--block) * 2);
+    left: calc(var(--block) * 0);
+}
+.num-0 > *:nth-child(6){
+    top: calc(var(--block) * 2);
+    left: calc(var(--block) * 0);
+}
+.num-0 > *:nth-child(7){
+    top: calc(var(--block) * 1);
+    left: calc(var(--block) * 0);
+}
+.num-0 > *:nth-child(8){
+    top: calc(var(--block) * 3);
+    left: calc(var(--block) * 2);
+}
+.num-0 > *:nth-child(9){
+    top: calc(var(--block) * 4);
+    left: calc(var(--block) * 2);
+}
+.num-0 > *:nth-child(10){
+    top: calc(var(--block) * 4);
+    left: calc(var(--block) * 1);
+}
+.num-0 > *:nth-child(11){
+    top: calc(var(--block) * 4);
+    left: calc(var(--block) * 0);
+}
+.num-0 > *:nth-child(12){
+    top: calc(var(--block) * 3);
+    left: calc(var(--block) * 0);
+}
+
+
+.num-undefined > *:nth-child(1){
+    top: calc(var(--block) * 0);
+    left: calc(var(--block) * 1);
+}
+.num-undefined > *:nth-child(2){
+    top: calc(var(--block) * 0);
+    left: calc(var(--block) * 2);
+}
+.num-undefined > *:nth-child(3){
+    top: calc(var(--block) * 1);
+    left: calc(var(--block) * 2);
+}
+.num-undefined > *:nth-child(4){
+    top: calc(var(--block) * 2);
+    left: calc(var(--block) * 2);
+}
+.num-undefined > *:nth-child(5){
+    top: calc(var(--block) * 2);
+    left: calc(var(--block) * 0);
+}
+.num-undefined > *:nth-child(6){
+    top: calc(var(--block) * 2);
+    left: calc(var(--block) * 0);
+}
+.num-undefined > *:nth-child(7){
+    top: calc(var(--block) * 1);
+    left: calc(var(--block) * 0);
+}
+.num-undefined > *:nth-child(8){
+    top: calc(var(--block) * 3);
+    left: calc(var(--block) * 2);
+}
+.num-undefined > *:nth-child(9){
+    top: calc(var(--block) * 4);
+    left: calc(var(--block) * 2);
+}
+.num-undefined > *:nth-child(10){
+    top: calc(var(--block) * 4);
+    left: calc(var(--block) * 1);
+}
+.num-undefined > *:nth-child(11){
+    top: calc(var(--block) * 4);
+    left: calc(var(--block) * 0);
+}
+.num-undefined > *:nth-child(12){
+    top: calc(var(--block) * 3);
+    left: calc(var(--block) * 0);
+}

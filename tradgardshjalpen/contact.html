@@ -11,7 +11,7 @@
 <body>
     <header>
         <div class="topbar-container">
-            <div class="tb-title">Trädgårdshjälpen</div>
+            <a href="index.html" class="tb-title">Trädgårdshjälpen</a>
             <a href="#" class="tb-about-container-2 computer line-under-container">
                 <div class="tb-about-2 computer line-under">Kontakta Oss</div>
             </a>
@@ -41,13 +41,14 @@
         <div class="contact-container">
             <div class="title-container">
                 <h1>Kontakta oss!</h1>
+                <p>Vi återkommer så fort som möjligt med svar efter du fyllt i formuläret!</p>
             </div>
-            <form action="https://formsubmit.co/hjalmar.bulow@gmail.com" method="POST">
+            <form action="https://formsubmit.co/hjalmar.bulow@gmail.com" method="POST" class="contact-form">
                 <input type="hidden" name="_subject" value="Nytt uppdrag!">
-                <input placeholder="Namn" type="text" name="name" required>
-                <input placeholder="Email" type="email" name="email" required>
-                <h2>Beskriv vad du önskar få fixat i eran trädgård. </h2>
-                <textarea name="message" placeholder="Medelande" required></textarea>
+                <input placeholder="Namn" type="text" name="Namn" required>
+                <input placeholder="Email" type="email" name="Email" required>
+                <input placeholder="Telefon" type="telephone" name="Telefon" required>
+                <textarea name="Medelande" placeholder="Kort beskrivning vad ni vill få uträttat av oss." required></textarea>
                 <button type="submit">Skicka</button>
            </form>
         </div>
