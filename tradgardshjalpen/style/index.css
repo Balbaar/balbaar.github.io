@@ -49,7 +49,6 @@ footer{
     background-color: var(--green5);
     display: grid;
     grid-template-columns: 2;
-    
 
 }
 
@@ -333,8 +332,7 @@ footer{
     width: 60vw;
     padding: 1rem;
     z-index: 3;
-    outline: 1px red solid;
-    margin-bottom: 3rem;
+    margin-bottom: 1rem;
 }
 
 .main-cont-3 > h1{
@@ -345,24 +343,29 @@ footer{
 }
 
 .main-cont-4 {
-    width: 100vw;
+    width: 60vw;
     display: grid;
     grid-template-columns: 50% 50%;
+    grid-auto-flow: column;
     z-index: 3;
-
-
-    outline: 1px red solid;
+    padding: 1rem;
+    padding-bottom: 3rem;
 }
 
 .main-cont-4 > p {
     color: black;
     font-size: 2rem;
-    padding-left: 10vw;
+    font-size: 1.5rem;   
 }
 
 .main-cont-4 > img {
     grid-column: 2/3;
+    width: 30vw;
+    border-radius: 1rem;
 }
+
+
+
 
 
 
