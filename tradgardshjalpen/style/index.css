@@ -30,7 +30,8 @@ b {
 body{
     display: grid;
     color: white;
-    overflow-x: hidden;  
+    overflow-x: hidden;
+    max-width: 100vw;  
 }
 
 header{
@@ -38,9 +39,12 @@ header{
     display: flex;
     position: fixed;
     z-index: 1337;
+    max-width: 100vw;  
+
 }
 
 main{  
+    max-width: 100vw;  
     
 }
 
