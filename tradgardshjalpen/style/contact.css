@@ -39,6 +39,9 @@ footer{
     background-color: var(--green5);
     display: grid;
     grid-template-columns: 2;
+    padding-left: 5%;
+    padding-right: 5%;
+
     color: white;
 }
 
@@ -228,7 +231,6 @@ footer > .title {
 footer > .social {
     grid-row: 1;
     grid-column: 1;
-    margin-left: 5vh;
 }
 
 footer > .info {
@@ -239,7 +241,6 @@ footer > .info {
 .foot-contact-socialmedia{
     display: grid;
     height: fit-content;
-    margin-left: 5vh;
     grid-column: 1;
 }
 
@@ -336,6 +337,10 @@ Hide elements that are not required for easy navigation in a mobile enviroment
 
 
 
+    footer > * {
+        padding: 0;
+    }
+
     footer > .social {
         grid-row: 3;
         grid-column: 1;
@@ -355,7 +360,6 @@ Hide elements that are not required for easy navigation in a mobile enviroment
     }
 
     .foot-contact-info{
-        width: 100%;
         grid-row: 2;
         grid-column: 1;
     }
