@@ -36,7 +36,6 @@ body{
 header{
     background-color: var(--green1);
     display: flex;
-    position: relative;
     position: fixed;
     z-index: 1337;
 }
@@ -542,6 +541,15 @@ Hide elements that are not required for easy navigation in a mobile enviroment
         padding: 1rem;
         border-radius: 1rem;
     }
+
+    .main-cont-4 {
+        background-color: rgba(255, 255, 255, 0.6);
+        width: 80vw;
+        padding: 1rem;
+        border-radius: 1rem;
+    }
+
+
 
 
     footer > .social {
