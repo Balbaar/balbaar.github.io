@@ -4,9 +4,76 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/gallery.css">
+    <link rel="stylesheet" href="style/common.css">
     <title>Bildgalleri</title>
 </head>
 <body>
-    
+    <header>
+        <div class="topbar-container">
+            <a href="index.html" class="tb-title">Trädgårdshjälpen</a>
+            <a href="#" class="tb-about-container-2 computer line-under-container">
+                <div class="tb-about-2 computer line-under">Kontakta Oss</div>
+            </a>
+
+            <a href="#" class="tb-gallery-container-2 computer line-under-container">
+                <div class="tb-gallery-2 computer line-under">Bildgalleri</div>
+            </a>
+
+
+            <!--Mobile Dropdown Menu -->
+            <img onclick="toggleDropdown()" id="dropdown-icon" class="tb-menu-icon" src="assets/icons/menu.png" alt="">
+
+            <div id="dropdown" class="dropdown-container hide-dropdown">
+                <a href="#" class="tb-about-container">
+                    <div class="tb-about">Kontakta Oss</div>
+                </a>
+
+                <a href="#" class="tb-gallery-container">
+                    <div class="tb-gallery">Bildgalleri</div>
+                </a>
+            </div>
+
+        </div>
+    </header>
+
+    <main>
+        <h1><b>Bildgalleri</b></h1>
+        <h2>Lite av tidigare arbeten. Fler bilder kommer komma!</h2>
+        <div class="container">
+            <img src="assets/bushes.JPG" alt="">
+            <img src="assets/after.JPG" alt="">
+            <img src="assets/Gang1.jpg" alt="">
+            <img src="assets/Kungsangsliljor.jpg" alt="">
+            <img src="assets/Odlingsbaddar.jpg" alt="">
+            <img src="assets/Odlingsbaddar2.jpg" alt="">
+            <img src="assets/Damm5.jpg" alt="">
+            
+        </div>
+    </main>
+
+    <footer>
+        <h2 class="social title">Socialmedia</h2>
+        <div class="foot-contact-socialmedia">
+            <a href="#" class="foot-social-item">
+                Instagram
+            </a>
+            <a href="#" class="foot-social-item">
+                Youtube
+            </a>
+        </div>
+        <h2 class="info title">Kontaktinfo</h2>
+        <div class="foot-contact-info">
+            <div class="name">
+                <h1>Namn: Pär Hansson</h1>
+            </div>
+            <div class="telephone">
+                <h1>Telefon: 0708 - 310 230</h1>
+            </div>
+            <div class="mail">
+                <a href="mailto:info@tradgardshjalpen.com">Epost: info@tradgardshjalpen.com</a>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>
