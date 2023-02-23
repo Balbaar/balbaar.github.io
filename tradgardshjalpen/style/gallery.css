@@ -72,4 +72,9 @@ main > .container > img {
     main > .container > img {
         max-height: 40vh;
     }
+
+    main > h2, h1 {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
 }
