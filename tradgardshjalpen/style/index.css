@@ -115,6 +115,22 @@ body{
     padding-top: 1rem;
 }
 
+.main-per .button {
+    background-color: var(--green1);
+    width: fit-content;
+    height: fit-content;
+    padding: 1rem;
+    border-radius: 1.8rem;
+    color: white;
+    font-size: 1.5rem;
+    position: relative;
+    left: 40%;
+}
+
+.main-per .button:hover {
+    background-color: var(--green2);
+}
+
 
 
 .main-content{
@@ -318,6 +334,12 @@ Hide elements that are not required for easy navigation in a mobile enviroment
     .main-per > .container > img {
         width: 80%;
         max-width: 200px;
+    }
+
+    .main-per .button {
+        font-size: 1.2rem;
+        padding: 1rem;
+        left: 0%;
     }
 
     .main-content{
