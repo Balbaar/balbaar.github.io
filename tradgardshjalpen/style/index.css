@@ -243,7 +243,16 @@ body{
     padding-bottom: 1rem;
 }
 .main-cont-3 > h2{
-    padding-bottom: 0.5rem;
+    padding-bottom: 2rem;
+}
+
+.main-cont-3 > .button {
+    font-size: 1.5rem;
+    color: white;
+    padding: 1rem;
+    position: relative;
+    border-radius: 1.8rem;
+    background-color: var(--green1);
 }
 
 .main-cont-4 {
@@ -298,7 +307,6 @@ Hide elements that are not required for easy navigation in a mobile enviroment
     }
 
     .main-background {
-        background-position: -20rem;
     }
 
     .main-title{
@@ -309,11 +317,17 @@ Hide elements that are not required for easy navigation in a mobile enviroment
         font-size: 1.4rem;
     }
 
+    .main-per {
+        padding: 1rem;
+    }
+
+    
+
     .main-per > .container {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
+        display: grid;
+        grid-template-columns: 30% 70%;
         margin: 0;
+        padding: 0;
     }
 
     .main-per > .container > * {
@@ -332,7 +346,8 @@ Hide elements that are not required for easy navigation in a mobile enviroment
     }
 
     .main-per > .container > img {
-        width: 80%;
+        padding: 0.5rem;
+        width: 100%;
         max-width: 200px;
     }
 
